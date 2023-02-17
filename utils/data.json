@@ -1,0 +1,172 @@
+{
+    "events": [
+        {
+            "id": 1,
+            "image_url": "../assets/card_event.png",
+            "date": "10th December 2022",
+            "name": "name of event",
+            "description": "desribe the event here with a longer description just to check how it goes",
+            "ticket-price": 20,
+            "age_group": "all",
+            "timing": [
+                "7 : 00 PM",
+                "9: 00 PM"
+            ],
+            "status": "sold"
+        },
+        {
+            "id": 1,
+            "image_url": "url here",
+            "date": "10th December 2022",
+            "name": "name of event",
+            "description": "desribe the event here with a longer description just to check how it goes",
+            "ticket-price": 20,
+            "age_group": "all",
+            "timing": [
+                "7 : 00 PM",
+                "9: 00 PM"
+            ],
+            "status": "sold"
+        },
+        {
+            "id": 1,
+            "image_url": "url here",
+            "date": "10th December 2022",
+            "name": "name of event",
+            "description": "desribe the event here with a longer description just to check how it goes",
+            "ticket-price": 20,
+            "age_group": "18 +",
+            "timing": [
+                "7 : 00 PM",
+                "9: 00 PM"
+            ],
+            "status": "sold"
+        },
+        {
+            "id": 1,
+            "image_url": "url here",
+            "date": "10th December 2022",
+            "name": "name of event",
+            "description": "desribe the event here with a longer description just to check how it goes",
+            "ticket-price": 20,
+            "age_group": "all",
+            "timing": [
+                "7 : 00 PM",
+                "9: 00 PM"
+            ],
+            "status": "sold"
+        },
+        {
+            "id": 1,
+            "image_url": "url here",
+            "date": "10th December 2022",
+            "name": "name of event",
+            "description": "desribe the event here with a longer description just to check how it goes",
+            "ticket-price": 20,
+            "age_group": "all",
+            "timing": [
+                "7 : 00 PM",
+                "9: 00 PM"
+            ],
+            "status": "sold"
+        },
+        {
+            "id": 1,
+            "image_url": "url here",
+            "date": "10th December 2022",
+            "name": "name of event",
+            "description": "desribe the event here with a longer description just to check how it goes",
+            "ticket-price": 20,
+            "age_group": "all",
+            "timing": [
+                "7 : 00 PM",
+                "9: 00 PM"
+            ],
+            "status": "sold"
+        },
+        {
+            "id": 1,
+            "image_url": "url here",
+            "date": "10th December 2022",
+            "name": "name of event",
+            "description": "desribe the event here with a longer description just to check how it goes",
+            "ticket-price": 20,
+            "age_group": "all",
+            "timing": [
+                "7 : 00 PM",
+                "9: 00 PM"
+            ],
+            "status": "sold"
+        },
+        {
+            "id": 1,
+            "image_url": "url here",
+            "date": "10th December 2022",
+            "name": "name of event",
+            "description": "desribe the event here with a longer description just to check how it goes",
+            "ticket-price": 20,
+            "age_group": "18 +",
+            "timing": [
+                "7 : 00 PM",
+                "9: 00 PM"
+            ],
+            "status": "sold"
+        },
+        {
+            "id": 1,
+            "image_url": "url here",
+            "date": "10th December 2022",
+            "name": "name of event",
+            "description": "desribe the event here with a longer description just to check how it goes",
+            "ticket-price": 20,
+            "age_group": "all",
+            "timing": [
+                "7 : 00 PM",
+                "9: 00 PM"
+            ],
+            "status": "sold"
+        },
+        {
+            "id": 1,
+            "image_url": "url here",
+            "date": "10th December 2022",
+            "name": "name of event",
+            "description": "desribe the event here with a longer description just to check how it goes",
+            "ticket-price": 20,
+            "age_group": "all",
+            "timing": [
+                "7 : 00 PM",
+                "9: 00 PM"
+            ],
+            "status": "sold"
+        },
+        {
+            "id": 1,
+            "image_url": "url here",
+            "date": "10th December 2022",
+            "name": "name of event",
+            "description": "desribe the event here with a longer description just to check how it goes",
+            "ticket-price": 20,
+            "age_group": "all",
+            "timing": [
+                "7 : 00 PM",
+                "9: 00 PM"
+            ],
+            "status": "sold"
+        },
+        {
+            "id": 1,
+            "image_url": "url here",
+            "date": "10th December 2022",
+            "name": "name of event",
+            "description": "desribe the event here with a longer description just to check how it goes",
+            "ticket-price": 20,
+            "age_group": "all",
+            "timing": [
+                "7 : 00 PM",
+                "9: 00 PM"
+            ],
+            "status": "sold"
+        }
+    ]
+}

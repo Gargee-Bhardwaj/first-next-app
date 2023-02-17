@@ -1,0 +1,131 @@
+.header {
+    padding: 0;
+    margin: 0;
+    height: 102px;
+    width: 100%;
+    left: 0px;
+    top: 0px;
+    border-radius: 0px;
+    display: flex;
+    justify-content: center;
+    background-color: #270F33;
+}
+
+.header_content {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+    max-width: 1440px;
+
+}
+
+.nav_items {
+    display: flex;
+    gap: 21px;
+    font-family: Roboto;
+    font-size: 14px;
+    font-weight: 400px;
+    line-height: 16px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+
+.search_bar {
+    Width: 435px;
+    Height: 34px;
+    border-radius: 25px;
+    background: none;
+}
+
+.search_image {
+    overflow: visible;
+    position: relative;
+    margin-left: -8rem;
+    margin-top: 2.2rem;
+    cursor: pointer;
+
+}
+
+.footer {
+    padding: 0;
+    margin: 0;
+    height: 451px;
+    width: 100%;
+    left: 0px;
+    top: 0px;
+    border-radius: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #270F33;
+}
+
+.footer_content {
+    max-width: 1440px;
+}
+
+.footer_column {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    gap: 40px;
+}
+
+.nav_items_footer {
+    display: flex;
+    gap: 51px;
+    font-family: Roboto;
+    font-size: 14px;
+    font-weight: 400px;
+    line-height: 16px;
+    letter-spacing: 0em;
+}
+
+.social_icons {
+    display: flex;
+    gap: 21px;
+}
+
+.event_updates {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 202px;
+    width: 730px;
+    border: solid;
+    border-color: #FBD07A;
+    border-radius: 8px;
+}
+
+.event_updates_input_container {
+    display: flex;
+}
+
+.event_updates_input {
+    flex: 1;
+    background-color: #FFFFFF;
+    height: 75px;
+    width: 541px;
+    border-radius: 7px;
+    padding-left: 1rem;
+    margin-top: 1rem;
+}
+
+.submit_button {
+    overflow: visible;
+    position: relative;
+    margin-left: -8rem;
+    margin-top: 2.2rem;
+    background-color: #FBD07A;
+    color: black;
+    height: 45.039371490478516px;
+    width: 104px;
+    border-radius: 8.188976287841797px;
+    cursor: pointer;
+
+}
