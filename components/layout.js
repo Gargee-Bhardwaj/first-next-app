@@ -8,54 +8,102 @@ import mail from "../assets/mail.png";
 import search from "../assets/search.png";
 import styles from "../styles/Layout.module.css";
 
-const Navbar = () => {
-    return <div className={styles.header}>
-        <div className={styles.header_content}>
-            <div >
-                <Image
-                    src={logo} // Route of the image file
-                    height={94} // Desired size with correct aspect ratio
-                    width={92} // Desired size with correct aspect ratio
-                    alt="Logo image"
-                />
-            </div>
+import eventData from "../utils/data.json"
 
-            <div className={styles.search_container} >
-                <div>
-                    <Image
-                        src={search} // Route of the image file
-                        height={11} // Desired size with correct aspect ratio
-                        width={11} // Desired size with correct aspect ratio
-                        alt="search icon"
-                    />
-                </div>
-                <input className={styles.search_bar} type="search" placeholder="Search" name="search" />
-            </div>
-            <div className={styles.nav_items}>
+import { useState } from "react";
 
-                <Link href="/">Home</Link>
+//     const [showMenu, setShowMenu] = useState(false);
 
-                <Link href="/">What's on</Link>
+//     const toggleMenu = () => {
+//         setShowMenu(!showMenu);
+//     };
+//     const [query, setQuery] = useState('');
+//     const handleChange = (e) => {
+//         setQuery(e.target.value)
+//     }
+//     console.log("query" + query);
 
-                <Link href="/">Book Venue</Link>
+//     // filter function
+//     // const searchFilter = (array) => {
+//     //     return array.filter(
+//     //         (el) => el.name.toLowerCase().includes(query)
+//     //     )
+//     // }
+//     // console.log(eventData);
 
-                <Link href="/">Menu</Link>
 
-                <Link href="/gallery">Gallery</Link>
+//     const searchFilter = (array, query) => {
+//         return array.filter(
+//             (el) => el.name.toLowerCase().includes(query.toLowerCase())
+//         );
+//     };
 
-                <Link href="/">Contact Us</Link>
+//     //const filteredEvents = searchFilter(eventData.events);
+//     const filteredEvents = searchFilter(eventData.events, query);
 
-                <Link href="/">About Us</Link>
-            </div>
-        </div>
 
-    </div>;
-};
+
+//     return <div className={styles.header}>
+//         <div className={styles.header_content}>
+//             <div >
+//                 <Image
+//                     src={logo}
+//                     height={94}
+//                     width={92}
+//                     alt="Logo image"
+//                 />
+//             </div>
+
+//             <div className={styles.search_container} >
+//                 <div className={styles.search_image}>
+//                     <Image
+//                         src={search}
+//                         height={11}
+//                         width={11}
+//                         alt="Logo image"
+//                     />
+//                 </div>
+//                 <input className={styles.search_bar} type="search" placeholder="Search" name="search" onchange={handleChange}  />
+//             </div>
+//             <div className={`${styles.nav_items} ${showMenu && styles.show}`}>
+
+//                 <Link href="/">Home</Link>
+
+//                 <Link href="/">What's on</Link>
+
+//                 <Link href="/">Book Venue</Link>
+
+//                 <Link href="/">Menu</Link>
+
+//                 <Link href="/gallery">Gallery</Link>
+
+//                 <Link href="/">Contact Us</Link>
+
+//                 <Link href="/">About Us</Link>
+//             </div>
+//             <div className={styles.hamburger_menu}>
+//                 <Image
+//                     src={search}
+//                     height={22}
+//                     width={22}
+//                     alt="Logo image"
+//                 />
+//             </div>
+//             <button className={styles.hamburger_menu} onClick={toggleMenu}>
+//                 <span className={styles.line}></span>
+//                 <span className={styles.line}></span>
+//                 <span className={styles.line}></span>
+//             </button>
+
+//         </div>
+
+//     </div>;
+// };
 
 const Footer = () => {
     return <div className={styles.footer}>
         <div className={styles.footer_content}>
-            <div className={styles.footer_column}>
+            <div className={styles.footer_column1}>
                 <div>
                     <Image
                         src={logo}
@@ -93,7 +141,7 @@ const Footer = () => {
 
                 </div>
             </div>
-            <div className={styles.footer_column}>
+            <div className={styles.footer_column2}>
                 <div className={styles.event_updates}>
                     <div>
                         <h2>Get Event Updates</h2>
@@ -103,9 +151,9 @@ const Footer = () => {
                         </div>
                     </div>
                 </div>
-                <div className={styles.contact_us}>
+                <div className={styles.side_columns}>
+                    <h3>Contact us</h3>
                     <div>
-                        <h3>Contact us</h3>
                         <Image
                             src={mail}
                             height={18}
@@ -122,7 +170,7 @@ const Footer = () => {
                         /> <span>0330 202 1818</span>
                     </div>
                 </div>
-                <div className={styles.contact_us}>
+                <div className={styles.side_columns}>
                     <h3>Privacy</h3>
                     <p>
                         <Link href="/">Terms and Conditions</Link>
@@ -131,6 +179,66 @@ const Footer = () => {
                     <p><Link href="/">About Us</Link></p>
                 </div>
             </div>
+            <div className={styles.copyrights}>
+                <p>©  18 candleriggs 2022</p>
+            </div>
+        </div>
+        <div className={styles.mobile_footer_content}>
+            <div className={styles.mobile_footer_links}>
+                <Link href="/">Terms and Conditions</Link>
+
+                <Link href="/">Privacy policy</Link>
+
+                <Link href="/">FAQ</Link>
+            </div>
+            <div className={styles.mobile_event_updates}>
+                <div>
+                    <h5>Get Event Updates</h5>
+                    <div className={styles.mobile_event_updates_input_container}>
+                        <input className={styles.mobile_event_updates_input} type="text" placeholder="admin123@gmail.com" />
+                        <button className={styles.mobile_submit_button}>Submit</button>
+                    </div>
+                </div>
+            </div>
+            <div className={styles.mobile_footer_contact_us}>
+                <h4>contact us</h4>
+                <div>
+                    <Image
+                        src={mail}
+                        height={12}
+                        width={17}
+                        alt="Phone icon"
+                    /> <span>events@18candleriggs.com</span>
+                </div>
+                <div>
+                    <Image
+                        src={phone}
+                        height={16}
+                        width={16}
+                        alt="Mail Icon"
+                    /> <span>0330 202 1818</span>
+                </div>
+            </div>
+            <div className={styles.mobile_footer_social_links}>
+                <h4>Social Links</h4>
+                <div className={styles.social_icons}>
+                    <Image
+                        src={facebook}
+                        height={16.3}
+                        width={16.3}
+                        alt="Facebook Icon"
+                    />
+                    <Image
+                        src={instagram}
+                        height={16.3}
+                        width={16.3}
+                        alt="Instagram Icon"
+                    />
+
+                </div>
+            </div>
+            <div className={styles.mobile_footer_copyright}>©  18 candleriggs 2022</div>
+
         </div>
 
     </div>;
@@ -139,7 +247,7 @@ const Footer = () => {
 const Layout = ({ children }) => {
     return (
         <>
-            <Navbar />
+            {/* <Navbar /> */}
             {children}
             <Footer />
         </>

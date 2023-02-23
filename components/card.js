@@ -4,19 +4,79 @@ import card_event from "../assets/card_event.png"
 import calender from "../assets/calender.png"
 import ticket from "../assets/ticket.png"
 import age from "../assets/age.png"
+import sold_out from "../assets/sold_out.png"
+import cancelled from "../assets/cancelled.png"
 import timing from "../assets/timing.png"
 
 
 const EventCard = ({ event }) => {
+
+    const getEventStatus = () => {
+        switch (event.status) {
+            case "sold out":
+                return styles.soldButton;
+            case "Book Tickets":
+                return styles.bookButton;
+            case "Private Event":
+                return styles.privateButton;
+            case "cancelled":
+                return styles.cancelled;
+            default:
+                return styles.defaultButton
+        }
+    }
+
     return (
         <div className={styles.card_container}>
             <div className={styles.imageWrapper}>
-                <Image
-                    src={card_event}
-                    width={333}
-                    height={414}
-                    alt={event.name}
-                />
+                <div className={styles.image}>
+                    {event.status == 'sold out' || event.status == 'cancelled' ? (
+
+                        <div>
+                            {event.status == 'sold out' ? (
+                                <div >
+                                    <Image
+                                        src={sold_out}
+                                        className={styles.stamp_image}
+                                        alt={'sold out'}
+                                    />
+                                    <Image
+                                        src={card_event}
+                                        width={333}
+                                        height={414}
+                                        alt={event.name}
+                                    />
+                                </div>) :
+                                <div className={styles.cancelled}>
+                                    <Image
+                                        src={cancelled}
+                                        className={styles.stamp_image}
+                                        alt={'cancelled'}
+                                    />
+                                    <Image
+                                        src={card_event}
+                                        width={333}
+                                        height={414}
+                                        alt={event.name}
+                                    />
+                                </div>
+                            }
+
+                        </div>
+                    )
+                        :
+                        (
+                            <div>
+                                <Image
+                                    src={card_event}
+                                    width={333}
+                                    height={414}
+                                    alt={event.name}
+                                />
+                            </div>
+                        )
+                    }
+                </div>
                 <div className={styles.date}>
                     <Image
                         src={calender}
@@ -62,7 +122,7 @@ const EventCard = ({ event }) => {
                         Timing: {event.timing.join(', ')}</p>
                 </div>
                 <div>
-                    <button className={styles.event_status} >{event.status}</button>
+                    <button className={`${styles.event_status} ${getEventStatus()}`} >{event.status}</button>
                 </div>
             </div>
 

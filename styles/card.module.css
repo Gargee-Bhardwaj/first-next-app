@@ -3,15 +3,17 @@
     flex-direction: row;
     flex-wrap: wrap;
     align-items: center;
-    background-color: #D2D0D0;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    width: 333px;
     max-width: 333px;
+    font-family: sans-serif;
+    font-size: 400;
     color: black;
 }
 
 .imageWrapper {
-    Width: 333px;
+    width: inherit;
     Height: 450px;
     overflow: hidden;
     margin-bottom: 16px;
@@ -34,6 +36,7 @@
     font-size: 24px;
     font-weight: bold;
     margin-bottom: 12px;
+    margin-top: -1rem;
 }
 
 .description {
@@ -51,7 +54,6 @@
     font-size: 12px;
     gap: 5px;
     padding-left: 20px;
-    font-family: Open Sans;
     font-size: 12px;
     font-weight: 400;
     line-height: 16px;
@@ -98,4 +100,51 @@
     align-items: center;
     border-radius: 8px;
     margin-bottom: 12px;
+    border: none;
+}
+
+.soldButton {
+    background-color: #DC1C1C;
+    color: white;
+}
+
+.bookButton {
+    background-color: #FBD07A;
+    color: black;
+}
+
+.privateButton {
+    background-color: #270F33;
+    color: white;
+}
+
+.cancelled {
+    background-color: #A1A1A1;
+    color: white;
+}
+
+
+.stamp_image {
+    position: absolute;
+    margin-top: 10rem;
+    margin-left: 1.2rem;
+    border-radius: 25px;
+
+}
+
+
+@media (min-width: 320px) and (max-width: 376px) {
+
+    .card_container {
+        width: 280px;
+    }
+
+    .event_status {
+        width: 240px;
+    }
+
+    .stamp_image {
+        width: 17rem;
+        margin-left: 1rem;
+    }
 }

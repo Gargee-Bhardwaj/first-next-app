@@ -14,56 +14,70 @@
   justify-content: center;
   align-items: center;
   background-image: url("../assets/Header_bg.png");
-  background-size: cover;
-  height: 779px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 50rem;
   width: 100%;
+  padding: 0 3rem;
   max-width: 1440px;
 }
 
 .head_description {
   display: flex;
+  position: relative;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   background-image: url("../assets/Group78.png");
-  height: 462px;
-  width: 1272px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 29.5rem;
+  width: 100%;
+  font-weight: 400;
   font-family: 'Alike', serif;
-  font-weight: 300px;
 
 }
+
+.head_description1 {
+  font-size: 50px;
+}
+
+.head_description2 {
+  font-size: 40px;
+}
+
+
 
 .eventlist_heading {
   Width: 100%;
   max-width: 1440px;
   Height: 41px;
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
   color: black;
   font-family: Roboto;
   text-align: left;
-  margin-top: 105px;
+  margin-top: 5rem;
 }
 
 .eventlist_heading_item1 {
   display: flex;
+  margin: 0 auto;
   font-size: 35px;
   font-weight: 700;
   line-height: 41px;
   letter-spacing: 0em;
   color: black;
   font-family: Roboto;
-  text-align: left;
-
 }
 
 .eventlist_heading_item2 {
   display: flex;
   align-items: flex-end;
   font-weight: 500px;
-  font-size: 20px;
-  right: 0px;
+  font-size: 15px;
+  margin-right: 6rem;
 }
 
 .event_list {
@@ -74,7 +88,7 @@
   justify-content: center;
   flex-wrap: wrap;
   gap: 136px;
-  margin-top: 105px;
+  margin-top: 5rem;
 }
 
 .more_events {
@@ -86,4 +100,42 @@
   margin-bottom: 80px;
   font-weight: 500px;
   font-size: 20px;
+}
+
+@media (min-width: 320px) and (max-width: 400px) {
+  .head_section {
+    display: block;
+    height: 13rem;
+    padding: 3rem;
+  }
+
+  .head_description {
+    height: 7rem;
+  }
+
+  .head_description1 {
+    font-size: 11.1px;
+  }
+
+  .head_description2 {
+    font-size: 8.88px;
+  }
+
+  .event_list {
+    margin-top: 3rem;
+    gap: 3rem;
+  }
+
+  .eventlist_heading {
+    margin-top: 2.5rem;
+  }
+
+  .eventlist_heading_item1 {
+    font-size: 25px;
+    padding-left: 3rem;
+  }
+
+  .eventlist_heading_item2 {
+    display: none;
+  }
 }

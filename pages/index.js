@@ -1,10 +1,10 @@
 import Head from 'next/head'
 import Image from 'next/image'
-import { Inter } from '@next/font/google'
 import styles from '@/styles/Home.module.css'
-import Header_bg from "../assets/Header_bg.png"
 import arrow from "../assets/arrow_right.png"
 import Link from 'next/link'
+
+import Navbar from '@/components/navbar'
 
 import EventCard from '@/components/card'
 import eventData from "../utils/data.json"
@@ -19,6 +19,8 @@ export default function Home() {
     setNumCardsToShow(numCardsToShow + 6);
   };
 
+  const [query, setQuery] = useState('');
+
   return (
     <>
       <Head>
@@ -31,12 +33,13 @@ export default function Home() {
         <link rel="preconnect" href="https://fonts.gstatic.com" />
         <link href="https://fonts.googleapis.com/css2?family=Alike&family=Poppins:wght@100;200;300;500&family=Roboto:wght@100;700&display=swap" rel="stylesheet"></link>
       </Head>
+      <Navbar query={query} setQuery={setQuery} />
       <main className={styles.main}>
 
         <div className={styles.head_section}>
           <div className={styles.head_description}>
-            <h1>The perfect night out in Glasgow !</h1>
-            <h2>18 Candleriggs</h2>
+            <span className={styles.head_description1}>The perfect night out in Glasgow !</span>
+            <span className={styles.head_description2}>18 Candleriggs</span>
           </div>
 
         </div>
@@ -59,9 +62,20 @@ export default function Home() {
           </div>
         </div>
         <div className={styles.event_list}>
-          {eventData.events.slice(0, numCardsToShow).map((event) => (
+
+          {eventData.events && eventData.events.length ? eventData.events.filter((item) => {
+            if (query === "") {
+              return item;
+            } else if (
+              item.name
+                .toLowerCase()
+                .includes(query.toLowerCase())
+            ) {
+              return item;
+            }
+          }).slice(0, numCardsToShow).map((event) => (
             <EventCard key={event.id} event={event} />
-          ))}
+          )) : <div> No data to display</div>}
         </div>
         <div >
           <button className={styles.more_events} onClick={handleSeeMoreClick}>More Events</button>
@@ -69,5 +83,5 @@ export default function Home() {
 
       </main>
     </>
-  )
+  );
 }
