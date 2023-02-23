@@ -43,7 +43,7 @@ function Navbar({ query, setQuery }) {
                             alt="Logo image"
                         />
                     </div>
-                    <input className={styles.search_bar} type="search" placeholder="Search" onchange={handleChange} />
+                    <input className={styles.search_bar} type="search" placeholder="Search" onChange={handleChange} />
                 </div>
                 <div className={`${styles.nav_items} ${showMenu && styles.show}`}>
 
